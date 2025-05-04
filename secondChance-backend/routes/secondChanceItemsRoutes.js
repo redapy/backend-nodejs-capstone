@@ -6,7 +6,6 @@ const itemsRouter = express.Router();
 const connectToDatabase = require("../models/db");
 const logger = require("../logger");
 const { log } = require("console");
-// const logger = require("../logger");
 
 // Define the upload directory path
 const directoryPath = "public/images";
@@ -27,7 +26,6 @@ const collectionName = process.env.MONGO_COLLECTION;
 
 // Get all secondChanceItems
 itemsRouter.get("/", async (req, res, next) => {
-  logger.info("/ called");
   try {
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
