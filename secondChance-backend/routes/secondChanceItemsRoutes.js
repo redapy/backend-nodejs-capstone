@@ -5,7 +5,6 @@ const fs = require("fs");
 const itemsRouter = express.Router();
 const connectToDatabase = require("../models/db");
 const logger = require("../logger");
-const { log } = require("console");
 
 // Define the upload directory path
 const directoryPath = "public/images";

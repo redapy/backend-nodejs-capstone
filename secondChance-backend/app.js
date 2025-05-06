@@ -6,6 +6,7 @@ const pinoHttp = require("pino-http");
 const logger = require("./logger");
 const secondChanceItemsRoutes = require("./routes/secondChanceItemsRoutes");
 const searchRoutes = require("./routes/searchRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const connectToDatabase = require("./models/db");
 
@@ -19,16 +20,11 @@ connectToDatabase();
 app.use(express.json());
 
 // Route files
-
 app.use(pinoHttp({ logger }));
 
 // Use Routes
-// authRoutes Step 2: add the authRoutes and to the server by using the app.use() method.
-//{{insert code here}}
-
+app.use("/api/auth", authRoutes);
 app.use("/api/secondchance/items", secondChanceItemsRoutes);
-
-// Search API Task 2: add the searchRoutes to the server by using the app.use() method.
 app.use("/api/secondchance/search", searchRoutes);
 
 // Global Error Handler
