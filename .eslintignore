@@ -1,0 +1,42 @@
+# Node dependencies
+node_modules/
+
+# Build output folders
+dist/
+build/
+coverage/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.*.local
+
+# Generated or vendored code
+public/assets/
+frontend/static/
+backend/generated/
+another service/generated/
+
+# Lockfiles (if you lint package-managers separately)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+*.min.js
