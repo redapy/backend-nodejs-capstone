@@ -4,6 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const pinoHttp = require('pino-http')
 const logger = require('./logger')
+// eslint-disable-next-line no-unused-vars
 const { loadData } = require('./util/import-mongo/index')
 const secondChanceItemsRoutes = require('./routes/secondChanceItemsRoutes')
 const searchRoutes = require('./routes/searchRoutes')
